@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Escenarios de Simulación RM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Creación de Escenarios de Simulación RM</h1>
+        <form>
+            <!-- Sección 1: Información del Escenario -->
+            <label for="nombre-escenario">Nombre del Escenario</label>
+            <input type="text" id="nombre-escenario" name="nombre-escenario" placeholder="Ingrese el nombre del escenario">
+
+            <label for="cliente">Cliente</label>
+            <input type="text" id="cliente" name="cliente" placeholder="Ingrese el nombre del cliente">
+
+            <label for="autor">Autor(es)</label>
+            <input type="text" id="autor" name="autor" placeholder="Ingrese el nombre del autor o autores">
+
+            <label for="area-conocimiento">Área(s) de Conocimiento</label>
+            <input type="text" id="area-conocimiento" name="area-conocimiento" placeholder="Ingrese el área o áreas de conocimiento">
+
+            <label for="duracion">Duración (minutos por participante)</label>
+            <input type="number" id="duracion" name="duracion" placeholder="Ingrese la duración">
+
+            <label for="lenguaje">Lenguaje</label>
+            <input type="text" id="lenguaje" name="lenguaje" placeholder="Ejemplo: Español, Inglés">
+
+            <!-- Sección 2: Configuración del Escenario -->
+            <label for="descripcion-escenario">Descripción del Escenario</label>
+            <textarea id="descripcion-escenario" name="descripcion-escenario" rows="5" placeholder="Describa el escenario con detalle"></textarea>
+
+            <label for="objetivo1">Objetivo de Aprendizaje 1</label>
+            <input type="text" id="objetivo1" name="objetivo1" placeholder="Ingrese el primer objetivo de aprendizaje">
+
+            <label for="objetivo2">Objetivo de Aprendizaje 2</label>
+            <input type="text" id="objetivo2" name="objetivo2" placeholder="Ingrese el segundo objetivo de aprendizaje">
+
+            <!-- Sección 3: Configuración de Personajes -->
+            <label for="personajes">Personajes Participantes</label>
+            <textarea id="personajes" name="personajes" rows="3" placeholder="Describa los personajes y sus roles"></textarea>
+
+            <label for="dificultad">Nivel de Dificultad</label>
+            <select id="dificultad" name="dificultad">
+                <option value="0">Neutral (0) - Sin resistencia</option>
+                <option value="1">Bajo (1) - Poca resistencia</option>
+                <option value="2">Bajo-Medio (2) - Algo de resistencia</option>
+                <option value="3">Medio (3) - Resistencia promedio</option>
+                <option value="4">Medio-Alto (4) - Resistencia moderada</option>
+                <option value="5">Alto (5) - Resistencia total</option>
+            </select>
+
+            <!-- Sección 4: Retroalimentación -->
+            <label for="retroalimentacion">Tipo de Retroalimentación</label>
+            <textarea id="retroalimentacion" name="retroalimentacion" rows="3" placeholder="Especifique cómo se proporcionará la retroalimentación"></textarea>
+
+            <!-- Consentimientos -->
+            <label>Autorización para Usar el Escenario</label>
+            <input type="radio" id="autoriza-si" name="autorizacion" value="si">
+            <label for="autoriza-si">Sí</label>
+            <input type="radio" id="autoriza-no" name="autorizacion" value="no">
+            <label for="autoriza-no">No</label>
+
+            <label>¿Desea grabar la sesión?</label>
+            <input type="radio" id="grabar-si" name="grabar" value="si">
+            <label for="grabar-si">Sí</label>
+            <input type="radio" id="grabar-no" name="grabar" value="no">
+            <label for="grabar-no">No</label>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="button">Crear Escenario</button>
+        </form>
+    </div>
+</body>
+</html>
