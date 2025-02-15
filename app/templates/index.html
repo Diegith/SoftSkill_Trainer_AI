@@ -1,0 +1,33 @@
+<!-- filepath: [index.html](http://_vscodecontentref_/6) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Escenarios de Simulación RM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Creación de Escenarios de Simulación RM</h1>
+        <form method="POST" action="/">
+            {{ form.hidden_tag() }}
+            {{ form.nombre_escenario.label }} {{ form.nombre_escenario() }}
+            {{ form.cliente.label }} {{ form.cliente() }}
+            {{ form.autor.label }} {{ form.autor() }}
+            {{ form.area_conocimiento.label }} {{ form.area_conocimiento() }}
+            {{ form.duracion.label }} {{ form.duracion() }}
+            {{ form.lenguaje.label }} {{ form.lenguaje() }}
+            {{ form.descripcion_escenario.label }} {{ form.descripcion_escenario() }}
+            {{ form.objetivo1.label }} {{ form.objetivo1() }}
+            {{ form.objetivo2.label }} {{ form.objetivo2() }}
+            {{ form.personajes.label }} {{ form.personajes() }}
+            {{ form.dificultad.label }} {{ form.dificultad() }}
+            {{ form.retroalimentacion.label }} {{ form.retroalimentacion() }}
+            {{ form.autorizacion.label }} {{ form.autorizacion() }}
+            {{ form.grabar.label }} {{ form.grabar() }}
+            {{ form.submit() }}
+        </form>
+    </div>
+</body>
+</html>
