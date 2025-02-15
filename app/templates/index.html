@@ -10,22 +10,49 @@
 <body>
     <div class="container">
         <h1>Creación de Escenarios de Simulación RM</h1>
-        <form method="POST" action="/">
-            {{ form.hidden_tag() }}
+        <form method="POST" action="/openai">
+            {{ form.hidden_tag() }}            
+            <h3>Sección 0: Datos iniciales</h3>
             {{ form.nombre_escenario.label }} {{ form.nombre_escenario() }}
             {{ form.cliente.label }} {{ form.cliente() }}
             {{ form.autor.label }} {{ form.autor() }}
             {{ form.area_conocimiento.label }} {{ form.area_conocimiento() }}
             {{ form.duracion.label }} {{ form.duracion() }}
             {{ form.lenguaje.label }} {{ form.lenguaje() }}
+            {{ form.avatarAnfitrion.label }} {{ form.avatarAnfitrion() }}
+            <br>
+            <br>
+            <hr>
+            <h3>Sección 1: El participante</h3>
+            {{ form.rolParticipante.label }} {{ form.rolParticipante() }}
             {{ form.descripcion_escenario.label }} {{ form.descripcion_escenario() }}
             {{ form.objetivo1.label }} {{ form.objetivo1() }}
             {{ form.objetivo2.label }} {{ form.objetivo2() }}
+            <br>
+            <br>
+            <hr>
+            <h3>Sección 2: El contenido</h3>
+            {{ form.contenido.label }} {{ form.contenido() }}
+            <br>
+            <br>
+            <hr>
+            <h3>Sección 3: El escenario</h3>
+            {{ form.escenario1.label }} {{ form.escenario1() }}
+            {{ form.escenario2.label }} {{ form.escenario2() }}
+            {{ form.sobreLaSimulacion.label }} {{ form.sobreLaSimulacion() }}
+            <br>
+            <br>
+            <hr>
+            <h3>Sección 4: Los personajes</h3>
             {{ form.personajes.label }} {{ form.personajes() }}
             {{ form.dificultad.label }} {{ form.dificultad() }}
-            {{ form.retroalimentacion.label }} {{ form.retroalimentacion() }}
-            {{ form.autorizacion.label }} {{ form.autorizacion() }}
-            {{ form.grabar.label }} {{ form.grabar() }}
+
+            <br>
+            <br>
+            <hr>
+            <h3>Sección 5: La retroalimentacion</h3>
+            {{ form.retroalimentacion.label }} {{ form.retroalimentacion() }}           
+            
             {{ form.submit() }}
         </form>
     </div>
