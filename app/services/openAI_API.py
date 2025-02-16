@@ -1,9 +1,10 @@
 import os
+from flask import current_app
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://api.aimlapi.com/v1",
-    api_key="359251ce1dd64b5d9fb54d0c2069dce2",    
+    base_url=current_app.config['OPENAI_BASE_URL'],
+    api_key=current_app.config['OPENAI_API_KEY'],
 )
 
 response = client.chat.completions.create(

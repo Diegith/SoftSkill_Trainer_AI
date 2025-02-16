@@ -1,4 +1,3 @@
-<!-- filepath: [index.html](http://_vscodecontentref_/6) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creación de Escenarios de Simulación RM</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Creación de Escenarios de Simulación RM</h1>
-        <form method="POST" action="/openai">
+        <form method="POST" action="{{ url_for('main.openai_api') }}" onsubmit="showModal()">
             {{ form.hidden_tag() }}            
             <h3>Sección 0: Datos iniciales</h3>
             {{ form.nombre_escenario.label }} {{ form.nombre_escenario() }}
-            {{ form.cliente.label }} {{ form.cliente() }}
-            {{ form.autor.label }} {{ form.autor() }}
-            {{ form.area_conocimiento.label }} {{ form.area_conocimiento() }}
-            {{ form.duracion.label }} {{ form.duracion() }}
-            {{ form.lenguaje.label }} {{ form.lenguaje() }}
-            {{ form.avatarAnfitrion.label }} {{ form.avatarAnfitrion() }}
+           
             <br>
             <br>
             <hr>
@@ -56,5 +51,30 @@
             {{ form.submit() }}
         </form>
     </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loadingModalLabel">Creando Escenario</h5>
+                </div>
+                <div class="modal-body">
+                    Por favor, espera mientras se crea el escenario...
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function showModal() {
+            $('#loadingModal').modal('show');
+        }
+    </script>
 </body>
 </html>

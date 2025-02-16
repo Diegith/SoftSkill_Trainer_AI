@@ -1,5 +1,6 @@
 __pycache__/
 instance/
-.env
 .venv
 config.py
+c&p.txt
+services/openAI_API.py
